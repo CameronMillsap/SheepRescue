@@ -63,7 +63,7 @@ public class Sheep : MonoBehaviour
     {
         GameStateManager.Instance.DroppedSheep();
         sheepSpawner.RemoveSheepFromList(gameObject);
-        myRigidbody.isKinematic = false;
+        myCollider.enabled = false;
         myCollider.isTrigger = false;
         Destroy(gameObject, dropDestroyDelay);
         SoundManager.Instance.PlaySheepDroppedClip();
